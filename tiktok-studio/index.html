@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TikTok Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>🎬 TikTok Studio</h1>
+  <nav><button id="tabStudio" class="tab active">Estúdio</button><button id="tabFeed" class="tab">Feed</button></nav>
+</header>
+
+<main id="studio">
+  <section class="stage">
+    <canvas id="canvas" width="720" height="1280"></canvas>
+    <div id="countdown" hidden></div>
+    <div id="rec" hidden>● REC <span id="timer">0:00</span></div>
+  </section>
+
+  <section class="panel">
+    <h2>Fonte</h2>
+    <div class="row">
+      <button id="btnCam">📷 Câmera</button>
+      <label class="btn">📁 Enviar vídeo<input id="file" type="file" accept="video/*" hidden></label>
+    </div>
+
+    <h2>Filtro</h2>
+    <select id="filter">
+      <option value="none">Normal</option>
+      <option value="grayscale(1)">Preto e branco</option>
+      <option value="sepia(.8)">Sépia</option>
+      <option value="saturate(1.8) contrast(1.1)">Vívido</option>
+      <option value="hue-rotate(90deg) saturate(1.4)">Neon</option>
+      <option value="blur(2px) brightness(1.1)">Sonho</option>
+      <option value="invert(1)">Invertido</option>
+    </select>
+    <label>Espelhar <input id="mirror" type="checkbox" checked></label>
+
+    <h2>Texto</h2>
+    <div class="row">
+      <input id="txt" type="text" placeholder="Escreva algo…" maxlength="60">
+      <input id="txtColor" type="color" value="#ffffff">
+      <button id="addTxt">Adicionar</button>
+    </div>
+    <p class="hint">Arraste o texto no vídeo. Duplo clique remove.</p>
+
+    <h2>Gravar</h2>
+    <div class="row">
+      <button id="btnRec" class="primary" disabled>Gravar</button>
+      <button id="btnStop" disabled>Parar</button>
+    </div>
+    <p id="status" class="hint">Escolha uma fonte para começar.</p>
+  </section>
+</main>
+
+<main id="feed" hidden>
+  <p id="empty" class="hint">Nenhum vídeo ainda. Grave algo no Estúdio!</p>
+  <div id="videos"></div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
