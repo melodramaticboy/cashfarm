@@ -1,6 +1,7 @@
 # Lucas — Episódio 1: "Meu primeiro dia de aula"
 
 **Personagem:** Lucas, 4 anos, branco, olhos azuis, cabelo loiro.
+**Status:** roteiro fechado ✅
 **Duração:** ~58 s · Vertical 9:16 · Final em suspense (continua no ep. 2)
 
 | # | Tempo | Cena | Fala / Ação |
