@@ -468,6 +468,30 @@ def render(T):
 
 
 # ---------------------------------------------------------------- audio
+VOICES = {  # voz do espeak-ng (pt-br) + tom (-p) por personagem
+    'Lucas': ('pt-br+f5', 99, 165), 'Lucas (voz)': ('pt-br+f5', 99, 165),
+    'Mamãe': ('pt-br+f2', 62, 155), 'Papai': ('pt-br+m3', 28, 150),
+}
+
+
+def voice(txt, who, max_dur, sr):
+    import tempfile
+    v, pitch, speed = VOICES[who]
+    txt = txt.replace('…', ', ')
+    for _ in range(6):
+        with tempfile.NamedTemporaryFile(suffix='.wav') as f:
+            subprocess.run(['espeak-ng', '-v', v, '-p', str(pitch), '-s', str(speed), '-g', '4', '-w', f.name, txt], check=True)
+            with wave.open(f.name) as w:
+                rate, raw = w.getframerate(), w.readframes(w.getnframes())
+        x = np.frombuffer(raw, dtype='<i2').astype(np.float64) / 32768
+        if len(x) / rate <= max_dur:
+            break
+        speed = int(speed * 1.12)
+    t_new = np.arange(int(len(x) / rate * sr)) / sr
+    x = np.interp(t_new, np.arange(len(x)) / rate, x)
+    return x / max(1e-6, np.abs(x).max()) * .9
+
+
 def make_audio(path, sr=44100):
     n = int(DUR * sr)
     buf = np.zeros(n, dtype=np.float64)
@@ -502,6 +526,10 @@ def make_audio(path, sr=44100):
     for k, f in enumerate((1046.5, 1318.5, 1568.0, 2093.0)):
         add(52.35 + k * .11, bell(f), .22)
     add(54.2, bell(1568.0, 2.5), .12)
+    buf *= .35  # musica baixa, a voz fica na frente
+    for a0, b0, who, txt in LINES:
+        v = voice(txt, who, b0 - a0 - .15, sr)
+        add(a0 + .1, v, 1.0)
     buf /= max(1e-6, np.abs(buf).max()) / .85
     fade = int(.6 * sr)
     buf[-fade:] *= np.linspace(1, 0, fade)
