@@ -12,12 +12,15 @@
 | 5 | 31–38 s | **Manhã seguinte.** Mochila gigante, uniforme, cabelo penteado. | **Lucas:** "Eu vou ser o melhor aluno do mundo inteirooo!" |
 | 6 | 38–45 s | **Chegada.** Carro para na frente da escola. Pais se despedem no portão. | **Mamãe:** "Tchau, meu amor! Se divirta!" **Papai:** "Seja bonzinho!" **Lucas (acenando):** "Tchau, mamãe! Tchau, papai!" |
 | 7 | 45–52 s | **Lucas sozinho.** Ele se vira, olha o portão da escola e espia pelas grades, de fora pra dentro. Música animada vai baixando. | **Lucas (sussurrando):** "Nossa… que grande…" |
-| 8 | 52–58 s | **O susto.** Plano subjetivo (visão dele pelas grades): algo inesperado dentro da escola. Corte para close no rosto: olhos azuis arregalados, boca aberta. Música para de repente + som de susto. | **Lucas:** "…AAAAH!" |
+| 8 | 52–58 s | **A surpresa.** NÃO mostrar o que ele vê (fora de quadro). Só o rosto do Lucas em close: olhos azuis arregalados, boca aberta, fascinado. A música pausa e entra um som de "uau" (brilho/sino), não de susto. | **Lucas:** "…Uau…!" |
 | — | 58 s | **Tela preta.** | Texto: **"CONTINUA…"** |
 
-## Para decidir (ep. 2)
-O que o Lucas vê dentro da escola? Ideias: professora gigante / sala escura cheia de olhinhos / um monstro-mascote / tudo vazio e um sino tocando sozinho.
+## Episódio 2 (revelação)
+O Lucas vê um colega negro, e a reação dele é de curiosidade e encantamento, nunca de medo.
+- O ep. 1 termina em tom de **surpresa/admiração**, não de terror. Sem música ou som de susto, para a revelação não ser lida como "assustador".
+- O colega deve ser um personagem completo (nome, personalidade, humor próprio), não só "o motivo do susto".
+- A graça do ep. 2 vem da curiosidade inocente do Lucas e da reação do colega, e termina em amizade.
 
 ## Legenda e hashtags
-**Legenda:** "O primeiro dia de aula do Lucas… ele não esperava isso 😱"
+**Legenda:** "O primeiro dia de aula do Lucas… ele não esperava ver isso 😲"
 `#lucas #primeirodiadeaula #humor #episodio1 #fyp`
