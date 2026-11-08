@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TikTok Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>🎬 TikTok Studio <small>vídeos gerados por IA</small></h1></header>
+<main>
+  <section class="panel">
+    <h2>1. Sua ideia</h2>
+    <textarea id="idea" rows="3" placeholder="Ex: 3 curiosidades sobre o espaço que ninguém te contou"></textarea>
+    <div class="row">
+      <label>Duração
+        <select id="secs"><option>15</option><option selected>30</option><option>45</option><option>60</option></select>s
+      </label>
+      <label>Tom
+        <select id="tone"><option>divertido</option><option>informativo</option><option>dramático</option><option>motivacional</option><option>humorístico</option></select>
+      </label>
+    </div>
+    <button id="gen" class="primary">✨ Gerar vídeo com IA</button>
+    <p id="status" class="hint"></p>
+
+    <div id="result" hidden>
+      <h2>2. Ajuste o roteiro</h2>
+      <input id="title" type="text" placeholder="Título">
+      <div id="scenes"></div>
+      <p class="hint" id="tags"></p>
+    </div>
+  </section>
+
+  <section class="stage">
+    <canvas id="canvas" width="720" height="1280"></canvas>
+    <div class="row center">
+      <button id="play" disabled>▶ Assistir</button>
+      <button id="stop" disabled>■ Parar</button>
+      <button id="export" disabled>⬇ Exportar vídeo</button>
+    </div>
+    <p class="hint center" id="expHint"></p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

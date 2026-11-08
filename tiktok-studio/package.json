@@ -1,0 +1,8 @@
+{
+  "name": "tiktok-studio",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Estúdio de vídeos para TikTok gerados por IA",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}
